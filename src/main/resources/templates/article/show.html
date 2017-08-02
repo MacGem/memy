@@ -1,12 +1,20 @@
 <!DOCTYPE html>
-
 <html lang="en" xmlns:th="http://www.thymeleaf.org">
-
 <head>
     <meta charset="UTF-8">
     <title>Title</title>
 </head>
 <body>
-<h1>Hello world</h1>
+
+<p th:text="${article}"/>
+<h1>Hellloooooo</h1>
+
+<h2 th:text="${article.title}"/>
+
+
+<ul>
+<li th:each="article : ${article}" th:text="${article}"></li>
+
+</ul>
 </body>
 </html>

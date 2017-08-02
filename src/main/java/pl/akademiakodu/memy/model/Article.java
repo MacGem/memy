@@ -1,8 +1,5 @@
 package pl.akademiakodu.memy.model;
 
-/**
- * Created by Damian on 02.08.2017.
- */
 public class Article {
 
     private String title;
@@ -12,6 +9,7 @@ public class Article {
         this.title = title;
         this.description = description;
     }
+
 
     public String getTitle() {
         return title;
