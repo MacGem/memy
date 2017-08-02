@@ -11,7 +11,7 @@ import java.util.List;
 public interface ShowAllGifs {
 
     List<Gifs> showall();
-    //        return gifs;
 
     List<Gifs> showfav();
+
 }

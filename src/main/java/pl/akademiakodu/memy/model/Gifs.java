@@ -7,6 +7,21 @@ public class Gifs {
     private String name;
     private boolean favorite;
 
+    private Long id;
+
+    public Gifs(String name, Long id) {
+        this.name = name;
+        this.id = id;
+    }
+
+    public Long getId() {
+        return id;
+    }
+
+    public void setId(Long id) {
+        this.id = id;
+    }
+
     public Gifs() {
     }
 
