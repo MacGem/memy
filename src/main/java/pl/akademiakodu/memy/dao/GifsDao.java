@@ -1,7 +1,6 @@
 package pl.akademiakodu.memy.dao;
 
 import pl.akademiakodu.memy.model.Gifs;
-import sun.net.www.content.image.gif;
 
 import java.util.ArrayList;
 import java.util.List;
@@ -20,11 +19,12 @@ public class GifsDao implements ShowAllGifs {
         gifs.add(new Gifs("cowboy-coder", false));
         gifs.add(new Gifs("infinite-andrew", false));
     }
-
+    @Override
     public List<Gifs> showall() {
         return gifs;
     }
 
+    @Override
     public List<Gifs> showfav() {
 
         List<Gifs> gifsfav = new ArrayList<>();
