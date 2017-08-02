@@ -1,34 +1,34 @@
 package pl.akademiakodu.memy.model;
 
-/**
- * Created by macie on 02.08.2017.
- */
 public class Article {
 
     private String title;
-    private String discription;
+    private String description;
 
-    public Article() {
-    }
-
-    public Article(String title, String discription) {
+    public Article(String title, String description) {
         this.title = title;
-        this.discription = discription;
+        this.description = description;
     }
+
 
     public String getTitle() {
         return title;
+    }
+
+    public String getDescription() {
+        return description;
     }
 
     public void setTitle(String title) {
         this.title = title;
     }
 
-    public String getDiscription() {
-        return discription;
+    public void setDescription(String description) {
+        this.description = description;
+
+    }
+    public String toString(){
+        return title+" "+description;
     }
 
-    public void setDiscription(String discription) {
-        this.discription = discription;
-    }
 }

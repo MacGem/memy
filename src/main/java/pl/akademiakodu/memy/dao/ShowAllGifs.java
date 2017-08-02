@@ -4,7 +4,6 @@ import pl.akademiakodu.memy.model.Gifs;
 
 import java.util.List;
 
-import static pl.akademiakodu.memy.dao.GifsDao.gifs;
 
 /**
  * Created by macie on 02.08.2017.

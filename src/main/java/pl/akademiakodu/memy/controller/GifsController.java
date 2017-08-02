@@ -28,8 +28,6 @@ public class GifsController {
         return "favorites";
     }
 
-
-
 //    @RequestMapping("/getPhoto/{id}")
 //    public @ResponseBody
 //    byte[] getPhoto(@PathVariable("id") final String id) throws IOException {

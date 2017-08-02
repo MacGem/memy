@@ -9,10 +9,10 @@ import pl.akademiakodu.memy.model.Article;
 @Controller
 public class ArticleController {
 
-        @GetMapping("/show")
-        public String show(@ModelAttribute Article article, ModelMap modelMap){
-            modelMap.addAttribute("articles", article);
-            return "article/show";
-        }
+    @GetMapping("/show")
+    public String show(@ModelAttribute Article article, ModelMap modelMap){
+        modelMap.addAttribute("articles", article);
+        return "article/show";
     }
+}
 
