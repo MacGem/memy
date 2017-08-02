@@ -16,7 +16,7 @@ public class GifsDao implements ShowAllGifs {
         gifs.add(new Gifs("book-dominos", false));
         gifs.add(new Gifs("compiler-bot", true));
         gifs.add(new Gifs("cowboy-coder", false));
-        /*gifs.add(new Gifs("infinite-andrew", false));*/
+        gifs.add(new Gifs("infinite-andrew", false));
     }
     @Override
     public List<Gifs> showall() {
