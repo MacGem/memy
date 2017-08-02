@@ -4,11 +4,7 @@ import org.springframework.stereotype.Controller;
 import org.springframework.ui.ModelMap;
 import org.springframework.web.bind.annotation.*;
 import pl.akademiakodu.memy.dao.GifsDao;
-import pl.akademiakodu.memy.model.Article;
 
-import java.io.IOException;
-
-import static javafx.scene.input.KeyCode.M;
 
 /**
  * Created by macie on 02.08.2017.
