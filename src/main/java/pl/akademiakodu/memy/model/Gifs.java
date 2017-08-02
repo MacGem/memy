@@ -5,20 +5,16 @@ package pl.akademiakodu.memy.model;
  */
 public class Gifs {
     private String name;
-    private String favorite;
+    private boolean favorite;
 
     public Gifs() {
     }
 
-    public Gifs(String name) {
-        this.name = name;
-    }
 
-    public Gifs(String name, String favorite) {
+    public Gifs(String name, boolean favorite) {
         this.name = name;
         this.favorite = favorite;
     }
-
 
     public String getName() {
         return name;
@@ -28,11 +24,11 @@ public class Gifs {
         this.name = name;
     }
 
-    public String getFavorite() {
+    public boolean isFavorite() {
         return favorite;
     }
 
-    public void setFavorite(String favorite) {
+    public void setFavorite(boolean favorite) {
         this.favorite = favorite;
     }
 
