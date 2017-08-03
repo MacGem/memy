@@ -6,6 +6,11 @@ import org.springframework.web.bind.annotation.*;
 import pl.akademiakodu.memy.dao.CateDao;
 import pl.akademiakodu.memy.dao.GifsDao;
 import pl.akademiakodu.memy.model.Cate;
+import pl.akademiakodu.memy.model.Gifs;
+import sun.net.www.content.image.gif;
+
+import java.util.ArrayList;
+import java.util.List;
 
 /**
  * Created by macie on 02.08.2017.
@@ -15,10 +20,6 @@ public class GifsController {
     GifsDao gifDao = new GifsDao();
     CateDao cateDao = new CateDao();
 
-//    @GetMapping("/showgifs")
-//    public String show( ModelMap modelMap){
-//        return "home";
-//    }
     @GetMapping("/")
     public String hello( ModelMap modelMap){
         modelMap.addAttribute("gifs", gifDao.showall());
@@ -37,10 +38,12 @@ public class GifsController {
         return "categories";
     }
 
-//    @RequestMapping("/getPhoto/{id}")
-//    public @ResponseBody
-//    byte[] getPhoto(@PathVariable("id") final String id) throws IOException {
-//        byte[] imageBytes = dao.getImage(id);
-//        return imageBytes;
-//    }
+    @GetMapping("/gifs/search")
+    public String search(@RequestParam String q, ModelMap modelMap){
+        List<Gifs> gifses = new ArrayList<Gifs>();
+        gifses.add(gifDao.findName(q));
+        modelMap.addAttribute("gifs", gifses);
+        return "home";
+    }
+
 }

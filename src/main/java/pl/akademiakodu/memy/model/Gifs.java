@@ -4,10 +4,15 @@ package pl.akademiakodu.memy.model;
  * Created by macie on 02.08.2017.
  */
 public class Gifs {
+
     private String name;
     private boolean favorite;
 
     private Long id;
+
+    public Gifs(String name) {
+        this.name = name;
+    }
 
     public Gifs(String name, Long id) {
         this.name = name;

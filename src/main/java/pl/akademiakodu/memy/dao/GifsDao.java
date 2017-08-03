@@ -4,10 +4,9 @@ import pl.akademiakodu.memy.model.Gifs;
 import java.util.ArrayList;
 import java.util.List;
 
-/**
- * Created by macie on 02.08.2017.
- */
-public class GifsDao implements ShowAllGifs {
+
+
+public class GifsDao implements ShowGifs {
     static List<Gifs> gifs = new ArrayList<>();
 
     static {
@@ -18,6 +17,7 @@ public class GifsDao implements ShowAllGifs {
         gifs.add(new Gifs("cowboy-coder", false));
         gifs.add(new Gifs("infinite-andrew", false));
     }
+
     @Override
     public List<Gifs> showall() {
         return gifs;
@@ -36,13 +36,16 @@ public class GifsDao implements ShowAllGifs {
         return gifsfav;
     }
 
-
-
-
-
-
-
+    @Override
+    public Gifs findName(String name) {
+        Gifs search = null;
+        for (Gifs gif : gifs) {
+            if (gif.getName().equalsIgnoreCase(name)) {
+                search = gif;
+            }
+        }
+        return search;
 
     }
-
+}
 
